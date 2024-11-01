@@ -5,11 +5,12 @@ const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
 const path = require("path");
 var cors = require('cors');
-const corsOrigin ={
-    origin:'http://localhost:3000', //or whatever port your frontend is using
-    credentials:true,            
-    optionSuccessStatus:200
-}
+const corsOrigin = {
+  origin: true, // Allows all origins
+  credentials: true,            
+  optionSuccessStatus: 200
+};
+
 app.use(cors(corsOrigin));
 
 if (process.env.NODE_ENV !== "PRODUCTION") {
